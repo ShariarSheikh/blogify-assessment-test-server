@@ -6,7 +6,7 @@ async function bootstrap() {
   app.enableCors({
     origin: [
       'http://localhost:3000',
-      'https://blogify-assessment-test-server.onrender.com',
+      'https://blogify-assessment-test-client.vercel.app',
     ],
   });
   await app.listen(8000);
