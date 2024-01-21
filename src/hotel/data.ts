@@ -1,4 +1,6 @@
 // import * as casual from 'casual';
+const today = new Date();
+const oneDay = 24 * 60 * 60 * 1000; // one day in milliseconds
 
 export interface DataInterface {
   id: number;
@@ -14,7 +16,10 @@ export interface DataInterface {
   reviews: number;
   price: number;
   hotel_image: string;
-  dates: Date;
+  dates: {
+    startDate: string; // Tomorrow
+    endDate: string; // 10 days from tomorrow
+  };
 }
 
 export const locationsData: string[] = [
@@ -75,7 +80,10 @@ export const hotelData: DataInterface[] = [
     reviews: 87,
     price: 384,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 42,
@@ -91,7 +99,10 @@ export const hotelData: DataInterface[] = [
     reviews: 189,
     price: 174,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 54,
@@ -107,7 +118,10 @@ export const hotelData: DataInterface[] = [
     reviews: 67,
     price: 155,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 51,
@@ -123,7 +137,10 @@ export const hotelData: DataInterface[] = [
     reviews: 42,
     price: 259,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 10,
@@ -139,7 +156,10 @@ export const hotelData: DataInterface[] = [
     reviews: 58,
     price: 221,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 82,
@@ -155,7 +175,10 @@ export const hotelData: DataInterface[] = [
     reviews: 100,
     price: 343,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 80,
@@ -171,7 +194,10 @@ export const hotelData: DataInterface[] = [
     reviews: 110,
     price: 248,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 6,
@@ -187,7 +213,10 @@ export const hotelData: DataInterface[] = [
     reviews: 139,
     price: 247,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 86,
@@ -203,7 +232,10 @@ export const hotelData: DataInterface[] = [
     reviews: 69,
     price: 161,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 93,
@@ -219,7 +251,10 @@ export const hotelData: DataInterface[] = [
     reviews: 152,
     price: 230,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 75,
@@ -235,7 +270,10 @@ export const hotelData: DataInterface[] = [
     reviews: 188,
     price: 268,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 85,
@@ -251,7 +289,10 @@ export const hotelData: DataInterface[] = [
     reviews: 66,
     price: 311,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 78,
@@ -267,7 +308,10 @@ export const hotelData: DataInterface[] = [
     reviews: 172,
     price: 125,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 65,
@@ -283,7 +327,10 @@ export const hotelData: DataInterface[] = [
     reviews: 110,
     price: 293,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 43,
@@ -299,7 +346,10 @@ export const hotelData: DataInterface[] = [
     reviews: 188,
     price: 396,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 22,
@@ -315,7 +365,10 @@ export const hotelData: DataInterface[] = [
     reviews: 135,
     price: 289,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 5,
@@ -331,7 +384,10 @@ export const hotelData: DataInterface[] = [
     reviews: 189,
     price: 229,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 80,
@@ -347,7 +403,10 @@ export const hotelData: DataInterface[] = [
     reviews: 140,
     price: 327,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 66,
@@ -363,7 +422,10 @@ export const hotelData: DataInterface[] = [
     reviews: 125,
     price: 84,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 17,
@@ -379,7 +441,10 @@ export const hotelData: DataInterface[] = [
     reviews: 40,
     price: 185,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 63,
@@ -395,7 +460,10 @@ export const hotelData: DataInterface[] = [
     reviews: 131,
     price: 303,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 73,
@@ -411,7 +479,10 @@ export const hotelData: DataInterface[] = [
     reviews: 183,
     price: 362,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 63,
@@ -427,7 +498,10 @@ export const hotelData: DataInterface[] = [
     reviews: 109,
     price: 233,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 45,
@@ -443,7 +517,10 @@ export const hotelData: DataInterface[] = [
     reviews: 42,
     price: 220,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 62,
@@ -459,7 +536,10 @@ export const hotelData: DataInterface[] = [
     reviews: 26,
     price: 301,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 53,
@@ -475,7 +555,10 @@ export const hotelData: DataInterface[] = [
     reviews: 179,
     price: 151,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 94,
@@ -491,7 +574,10 @@ export const hotelData: DataInterface[] = [
     reviews: 26,
     price: 305,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 99,
@@ -507,7 +593,10 @@ export const hotelData: DataInterface[] = [
     reviews: 173,
     price: 156,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 50,
@@ -523,7 +612,10 @@ export const hotelData: DataInterface[] = [
     reviews: 13,
     price: 331,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 53,
@@ -539,7 +631,10 @@ export const hotelData: DataInterface[] = [
     reviews: 43,
     price: 107,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 96,
@@ -555,7 +650,10 @@ export const hotelData: DataInterface[] = [
     reviews: 57,
     price: 183,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 87,
@@ -571,7 +669,10 @@ export const hotelData: DataInterface[] = [
     reviews: 59,
     price: 313,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 81,
@@ -587,7 +688,10 @@ export const hotelData: DataInterface[] = [
     reviews: 103,
     price: 154,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 90,
@@ -603,7 +707,10 @@ export const hotelData: DataInterface[] = [
     reviews: 104,
     price: 309,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 52,
@@ -619,7 +726,10 @@ export const hotelData: DataInterface[] = [
     reviews: 133,
     price: 189,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 13,
@@ -635,7 +745,10 @@ export const hotelData: DataInterface[] = [
     reviews: 21,
     price: 319,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 34,
@@ -651,7 +764,10 @@ export const hotelData: DataInterface[] = [
     reviews: 193,
     price: 154,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 86,
@@ -667,7 +783,10 @@ export const hotelData: DataInterface[] = [
     reviews: 120,
     price: 153,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 41,
@@ -683,7 +802,10 @@ export const hotelData: DataInterface[] = [
     reviews: 182,
     price: 163,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
   {
     id: 89,
@@ -699,6 +821,16 @@ export const hotelData: DataInterface[] = [
     reviews: 185,
     price: 382,
     hotel_image: 'https://source.unsplash.com/800x600/?hotel',
-    dates: new Date('January 16, 2024'),
+    dates: {
+      startDate: formatDate(new Date(today.getTime() + oneDay * 1)), // Tomorrow
+      endDate: formatDate(new Date(today.getTime() + oneDay * 10)), // 10 days from tomorrow
+    },
   },
 ];
+
+function formatDate(date: Date) {
+  const dd = String(date.getDate()).padStart(2, '0');
+  const mm = String(date.getMonth() + 1).padStart(2, '0'); // January is 0!
+  const yyyy = date.getFullYear();
+  return mm + '/' + dd + '/' + yyyy;
+}

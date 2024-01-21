@@ -87,9 +87,10 @@ export class SearchController {
     const startDate = new Date(dates.startDate);
     const endDate = new Date(dates.endDate);
 
-    const listingDate = new Date(listing.dates);
+    const listingStartDate = new Date(listing.dates.startDate);
+    const listingEndDate = new Date(listing.dates.endDate);
 
-    return listingDate >= startDate && listingDate <= endDate;
+    return listingStartDate >= startDate && listingEndDate <= endDate;
   }
 
   // filter by guests
